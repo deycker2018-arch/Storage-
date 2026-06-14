@@ -1,0 +1,8 @@
+{
+  "name": "mis-almacenes",
+  "displayName": "Almacenes Industriales",
+  "author": "TuNombre",
+  "description": "Añade almacenes de tamaño 5x5 y 6x6 para el modo campaña.",
+  "version": "1.0",
+  "minGameVersion": "136"
+}
