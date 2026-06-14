@@ -1,0 +1,19 @@
+{
+  "type": "StorageBlock",
+  "name": "Mega Almacen",
+  "description": "Bloque masivo para conectar muchas cintas de 6x6.",
+  "size": 6,
+  "itemCapacity": 15000,
+  "requirements": [
+    { "item": "copper", "amount": 300 },
+    { "item": "lead", "amount": 300 }
+  ],
+  "category": "effect",
+  "research": {
+    "parent": "almacen-mediano",
+    "requirements": [
+      { "item": "copper", "amount": 4000 },
+      { "item": "lead", "amount": 4000 }
+    ]
+  }
+}
