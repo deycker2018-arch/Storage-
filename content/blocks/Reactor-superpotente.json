@@ -1,0 +1,55 @@
+{
+  "type": "NuclearReactor",
+  "name": "Reactor de Impacto Cuantico",
+  "description": "Un reactor monumental de 7x7. ¡ADVERTENCIA!: Requiere energia inicial para calentar, materiales avanzados y criofluido CONSTANTE. Si se queda sin refrigerante, se sobrecalentara y causara una explosion catastrofica.",
+  "size": 7,
+  "health": 15000,
+  "category": "power",
+  
+  "hasPower": true,
+  "hasLiquids": true,
+  "hasItems": true,
+  
+  "itemDuration": 12,
+  "itemCapacity": 15,
+  "powerProduction": 450,
+  
+  "heating": 0.01,
+  "coolantPower": 0.5,
+  "explosionRadius": 60,
+  "explosionDamage": 12000,
+  
+  "consumes": {
+    "power": 200,
+    "items": [
+      { "item": "thorium", "amount": 5 },
+      { "item": "plastanium", "amount": 5 },
+      { "item": "silicon", "amount": 5 },
+      { "item": "surge-alloy", "amount": 5 },
+      { "item": "blast-compound", "amount": 5 }
+    ],
+    "liquid": {
+      "liquid": "cryofluid",
+      "amount": 1.2
+    }
+  },
+  
+  "warmupSpeed": 0.0008,
+  
+  "requirements": [
+    { "item": "surge-alloy", "amount": 600 },
+    { "item": "phase-fabric", "amount": 400 },
+    { "item": "plastanium", "amount": 500 },
+    { "item": "thorium", "amount": 1000 },
+    { "item": "silicon", "amount": 1000 }
+  ],
+  
+  "research": {
+    "parent": "impact-reactor",
+    "requirements": [
+      { "item": "surge-alloy", "amount": 15000 },
+      { "item": "plastanium", "amount": 20000 },
+      { "item": "silicon", "amount": 60000 }
+    ]
+  }
+}
