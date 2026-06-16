@@ -1,0 +1,32 @@
+name: Generar Textura del Reactor
+on:
+  push:
+    paths:
+      - 'generator.py'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clonar repositorio
+      uses: actions/checkout@v4
+
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Instalar libreria de imagen
+      run: pip install Pillow
+
+    - name: Ejecutar creador
+      run: python generator.py
+
+    - name: Guardar imagen en el repositorio
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add content/blocks/reactor-superpotente.png
+        git commit -m "Sistema: Imagen generada de forma automatica" || exit 0
+        git push
