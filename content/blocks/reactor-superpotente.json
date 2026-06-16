@@ -1,7 +1,7 @@
 {
-  "type": "ImpactReactor",
-  "name": "Reactor de Impacto Cuantico",
-  "description": "Un reactor monumental de 7x7. Requiere una enorme cantidad de energia inicial para arrancar, 5 materiales avanzados simultaneos y criofluido CONSTANTE.",
+  "type": "NuclearReactor",
+  "name": "Reactor Nuclear Cuantico",
+  "description": "Un coloso de 7x7 que genera energia masiva estabilizando 5 materiales avanzados. Requiere un flujo gigantesco de criofluido.",
   "size": 7,
   "health": 15000,
   "category": "power",
@@ -13,11 +13,13 @@
   "itemDuration": 140,
   "powerProduction": 450,
   
-  "explosionRadius": 80,
-  "explosionDamage": 15000,
+  "heating": 0.002,
+  "coolantPower": 0.0005,
+  "explosionRadius": 95,
+  "explosionDamage": 25000,
   
   "consumes": {
-    "power": 200,
+    "power": 150,
     "items": [
       { "item": "thorium", "amount": 5 },
       { "item": "plastanium", "amount": 5 },
@@ -27,13 +29,9 @@
     ],
     "liquid": {
       "liquid": "cryofluid",
-      "amount": 1.2
+      "amount": 1.5
     }
   },
-  
-  "warmupSpeed": 0.00138,
-  "ambientSound": "pulse",
-  "ambientSoundVolume": 0.15,
   
   "requirements": [
     { "item": "surge-alloy", "amount": 600 },
@@ -44,10 +42,10 @@
   ],
   
   "research": {
-    "parent": "impact-reactor",
+    "parent": "thorium-reactor",
     "requirements": [
       { "item": "surge-alloy", "amount": 15000 },
-      { "item": "plastanium", "amount": 20000 },
+      { "item": "thorium", "amount": 30000 },
       { "item": "silicon", "amount": 60000 }
     ]
   }
