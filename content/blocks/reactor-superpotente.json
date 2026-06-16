@@ -1,7 +1,7 @@
 {
-  "type": "NuclearReactor",
+  "type": "ImpactReactor",
   "name": "Reactor de Impacto Cuantico",
-  "description": "Un reactor monumental de 7x7. ¡ADVERTENCIA!: Requiere energia inicial para calentar, materiales avanzados y criofluido CONSTANTE. Si se queda sin refrigerante, se sobrecalentara lentamente y en 2 minutos causara una explosion catastrofica.",
+  "description": "Un reactor monumental de 7x7. Requiere una enorme cantidad de energia inicial para arrancar, 5 materiales avanzados simultaneos y criofluido CONSTANTE.",
   "size": 7,
   "health": 15000,
   "category": "power",
@@ -10,12 +10,9 @@
   "hasLiquids": true,
   "hasItems": true,
   
-  "itemDuration": 12,
-  "itemCapacity": 15,
+  "itemDuration": 140,
   "powerProduction": 450,
   
-  "heating": 0.000138,
-  "coolantPower": 0.5,
   "explosionRadius": 80,
   "explosionDamage": 15000,
   
@@ -34,7 +31,9 @@
     }
   },
   
-  "warmupSpeed": 0.0008,
+  "warmupSpeed": 0.00138,
+  "ambientSound": "pulse",
+  "ambientSoundVolume": 0.15,
   
   "requirements": [
     { "item": "surge-alloy", "amount": 600 },
