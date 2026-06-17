@@ -1,7 +1,7 @@
 {
   "type": "NuclearReactor",
-  "name": "Reactor Nuclear Cuantico",
-  "description": "Un coloso de 7x7 que genera energia masiva estabilizando 5 materiales avanzados. Requiere un flujo gigantesco de criofluido.",
+  "name": "Reactor de Impacto Cuantico",
+  "description": "Un coloso hibrido de 7x7. Requiere 300 de energia constante, 5 materiales avanzados simultaneos y criofluido para iniciar su produccion de 750. SI EL CRIOFLUIDO SE CORTA, EL NUCLEO ENTRARA EN SOBRECALENTAMIENTO EXTREMO: Tienes exactamente 2 minutos para restaurar el refrigerante antes de un colapso termico total.",
   "size": 7,
   "health": 15000,
   "category": "power",
@@ -10,16 +10,25 @@
   "hasLiquids": true,
   "hasItems": true,
   
-  "itemDuration": 140,
-  "powerProduction": 450,
+  "itemDuration": 210,
+  "itemCapacity": 60,
+  "powerProduction": 750,
   
-  "heating": 0.002,
+  "heating": 0.000138,
   "coolantPower": 0.0005,
-  "explosionRadius": 95,
-  "explosionDamage": 25000,
+  
+  "ambientSound": "pulse",
+  "ambientSoundVolume": 0.35,
+  
+  "explosionSound": "explosionbig",
+  "flashHit": true,
+  
+  "emitLight": true,
+  "lightRadius": 110,
+  "lightColor": "89ddff",
   
   "consumes": {
-    "power": 150,
+    "power": 300,
     "items": [
       { "item": "thorium", "amount": 5 },
       { "item": "plastanium", "amount": 5 },
@@ -29,24 +38,27 @@
     ],
     "liquid": {
       "liquid": "cryofluid",
-      "amount": 1.5
+      "amount": 1.8
     }
   },
   
+  "explosionRadius": 110,
+  "explosionDamage": 30000,
+  
   "requirements": [
-    { "item": "surge-alloy", "amount": 600 },
-    { "item": "phase-fabric", "amount": 400 },
-    { "item": "plastanium", "amount": 500 },
-    { "item": "thorium", "amount": 1000 },
-    { "item": "silicon", "amount": 1000 }
+    { "item": "surge-alloy", "amount": 800 },
+    { "item": "phase-fabric", "amount": 500 },
+    { "item": "plastanium", "amount": 600 },
+    { "item": "thorium", "amount": 1200 },
+    { "item": "silicon", "amount": 1500 }
   ],
   
   "research": {
-    "parent": "thorium-reactor",
+    "parent": "impact-reactor",
     "requirements": [
-      { "item": "surge-alloy", "amount": 15000 },
-      { "item": "thorium", "amount": 30000 },
-      { "item": "silicon", "amount": 60000 }
+      { "item": "surge-alloy", "amount": 20000 },
+      { "item": "thorium", "amount": 40000 },
+      { "item": "silicon", "amount": 80000 }
     ]
   }
 }
